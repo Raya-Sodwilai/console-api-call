@@ -11,7 +11,7 @@ namespace ApiTest
   {
     static void Main()
     {
-      var apiCallTask = ApiHelper.ApiCall("[C26py04dsA3oJUTkC2zMZEyOKGBtJvxc]");
+      var apiCallTask = ApiHelper.ApiCall("C26py04dsA3oJUTkC2zMZEyOKGBtJvxc");
       var result = apiCallTask.Result;
       JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
       List<Article> articleList = JsonConvert.DeserializeObject<List<Article>>(jsonResponse["results"].ToString());
